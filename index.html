@@ -152,34 +152,32 @@
             padding-left: 0;
         }
         
-        .stats-section {
-            background: linear-gradient(135deg, var(--primary-color), #1e40af);
+        .section-separator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 3rem 0;
+            padding: 0 2rem;
+        }
+        
+        .separator-line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--border-color), transparent);
+        }
+        
+        .separator-icon {
+            margin: 0 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
-            padding: 4rem 0;
-            margin: 2rem 0;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-        
-        .stat-item {
-            padding: 1rem;
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-        
-        .stat-label {
-            font-size: 1rem;
-            opacity: 0.9;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
         }
         
         .btn {
@@ -226,40 +224,305 @@
         }
         
         .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .about-main {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .about-intro {
+            background: linear-gradient(135deg, var(--highlight), rgba(37, 99, 235, 0.05));
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--primary-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-intro::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, var(--primary-color), transparent);
+            opacity: 0.1;
+            border-radius: 50%;
+            transform: translate(30px, -30px);
+        }
+        
+        .intro-header {
             display: flex;
             align-items: center;
-            gap: 3rem;
+            gap: 1rem;
+            margin-bottom: 1rem;
         }
         
-        .about-text {
-            flex: 3;
+        .intro-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
         }
         
-        .skills {
-            flex: 2;
+        .intro-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin: 0;
         }
         
-        .skill-tags {
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-color);
+            margin: 0;
+        }
+        
+        .about-highlights {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        .highlight-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .highlight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+        
+        .highlight-header {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .highlight-icon {
+            width: 35px;
+            height: 35px;
+            background: var(--highlight);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 1rem;
+        }
+        
+        .highlight-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin: 0;
+        }
+        
+        .highlight-text {
+            color: var(--text-color);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+        
+        .skills-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .skills-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, var(--highlight), transparent);
+            opacity: 0.3;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+        
+        .skills-section:hover::before {
+            transform: rotate(180deg);
+        }
+        
+        .skills-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .skills-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--primary-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1rem;
+        }
+        
+        .skills-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin: 0;
+        }
+        
+        .skills-categories {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .skill-category {
+            background: var(--bg-color);
+            border-radius: 12px;
+            padding: 1.2rem;
+            border: 1px solid var(--border-color);
+        }
+        
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .category-icon {
+            width: 30px;
+            height: 30px;
+            background: var(--highlight);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+        
+        .category-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin: 0;
+        }
+        
+        .category-skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 0.5rem;
         }
         
-        .skill-tag {
-            background-color: var(--highlight);
+        .skill-tag-enhanced {
+            background: linear-gradient(135deg, var(--highlight), rgba(37, 99, 235, 0.1));
             color: var(--primary-color);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
             font-weight: 500;
             transition: all 0.3s ease;
             border: 1px solid transparent;
+            position: relative;
+            overflow: hidden;
         }
         
-        .skill-tag:hover {
+        .skill-tag-enhanced::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .skill-tag-enhanced:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
             border-color: var(--primary-color);
+        }
+        
+        .skill-tag-enhanced:hover::before {
+            left: 100%;
+        }
+        
+        .personal-mission {
+            background: linear-gradient(135deg, var(--primary-color), #1e40af);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+        
+        .personal-mission::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            animation: float 20s linear infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        
+        .mission-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .mission-quote {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .mission-author {
+            font-size: 0.9rem;
+            opacity: 0.9;
         }
         
         .testimonials {
@@ -696,33 +959,68 @@
             transform: translateX(0);
         }
         
-        /* Loading animation for stats */
+        /* Loading animation for projects */
         @keyframes countUp {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .stat-number.animate {
-            animation: countUp 0.8s ease forwards;
         }
         
         @media (max-width: 768px) {
             .hero {
                 flex-direction: column-reverse;
                 text-align: center;
+                padding: 3rem 0;
             }
             
             .hero-image {
                 margin-bottom: 2rem;
             }
             
+            .hero-content {
+                margin-left: 0;
+            }
+            
             h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
+                height: auto;
+                min-height: 6rem;
+                margin-bottom: 2rem;
+                line-height: 1.3;
+            }
+            
+            .typed-text {
+                min-width: auto;
+                display: block;
+                margin-top: 0.5rem;
+            }
+            
+            .hero p {
+                margin-top: 1rem;
+                font-size: 1.1rem;
+                line-height: 1.6;
             }
             
             .about-content {
-                flex-direction: column;
-                text-align: center;
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .about-highlights {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .skills-categories {
+                gap: 1rem;
+            }
+            
+            .personal-mission {
+                margin-top: 1rem;
+                padding: 1.5rem;
+            }
+            
+            .mission-quote {
+                font-size: 1.1rem;
             }
             
             .projects-grid {
@@ -837,52 +1135,156 @@
         </div>
     </section>
     
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Projects Completed</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">3+</span>
-                    <span class="stat-label">Years Experience</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">25+</span>
-                    <span class="stat-label">Happy Clients</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">99%</span>
-                    <span class="stat-label">Client Satisfaction</span>
-                </div>
-            </div>
+    <div class="section-separator">
+        <div class="separator-line"></div>
+        <div class="separator-icon">
+            <i class="fas fa-code"></i>
         </div>
-    </section>
+        <div class="separator-line"></div>
+    </div>
     
     <section id="about">
         <div class="container">
             <h2 class="section-title fade-in">About Me</h2>
             <div class="about-content">
-                <div class="about-text fade-in">
-                    <p>I'm currently a Software Engineering student at ESPRIT with a Bachelor's degree in Software Engineering and Information Systems. I work as an IBM Maximo Consultant while maintaining Spring Boot-Angular projects.</p>
-                    <p>With a strong background in Java, Spring Boot, and PHP, I also have extensive experience with JSP, XML, JavaScript, and Python. I'm passionate about creating efficient and maintainable code that delivers real business value.</p>
-                    <p>As an ex-team lead with 3 years of management experience, I excel at coordinating projects and ensuring timely delivery of high-quality solutions.</p>
+                <div class="about-main fade-in">
+                    <div class="about-intro">
+                        <div class="intro-header">
+                            <div class="intro-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h3 class="intro-title">Passionate Technology Architect</h3>
+                        </div>
+                        <p class="intro-text">I'm a results-driven Software Engineer and IBM Maximo Consultant who bridges the gap between complex technical solutions and real business value. Currently pursuing my Software Engineering degree at ESPRIT while actively shaping enterprise solutions at Sinorfi.</p>
+                    </div>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-card">
+                            <div class="highlight-header">
+                                <div class="highlight-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h4 class="highlight-title">Technical Excellence</h4>
+                            </div>
+                            <p class="highlight-text">Specialized in Java ecosystem with expertise in Spring Boot, Angular, and enterprise architecture. Deep knowledge of IBM Maximo suite and modern development practices.</p>
+                        </div>
+                        
+                        <div class="highlight-card">
+                            <div class="highlight-header">
+                                <div class="highlight-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h4 class="highlight-title">Leadership Experience</h4>
+                            </div>
+                            <p class="highlight-text">3+ years of team leadership experience managing 25+ professionals across international markets. Proven track record of increasing team productivity by 20%.</p>
+                        </div>
+                        
+                        <div class="highlight-card">
+                            <div class="highlight-header">
+                                <div class="highlight-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <h4 class="highlight-title">Innovation Mindset</h4>
+                            </div>
+                            <p class="highlight-text">Passionate about transforming traditional workflows through technology. Expert in creating AI-powered solutions and modern migration strategies.</p>
+                        </div>
+                        
+                        <div class="highlight-card">
+                            <div class="highlight-header">
+                                <div class="highlight-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <h4 class="highlight-title">Client Focus</h4>
+                            </div>
+                            <p class="highlight-text">Strong consultation skills with experience in client meetings, requirement gathering, and delivering solutions that exceed expectations with 99% satisfaction rate.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="personal-mission">
+                        <div class="mission-content">
+                            <p class="mission-quote">"I believe in writing code that not only works today but evolves with tomorrow's challenges. Every project is an opportunity to create something meaningful that makes a real difference."</p>
+                            <p class="mission-author">— My Development Philosophy</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="skills fade-in" id="skills">
-                    <h3>Skills & Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">PHP</span>
-                        <span class="skill-tag">Spring Boot</span>
-                        <span class="skill-tag">Angular</span>
-                        <span class="skill-tag">IBM Maximo</span>
-                        <span class="skill-tag">Dolibarr CRM</span>
-                        <span class="skill-tag">JSP</span>
-                        <span class="skill-tag">XML</span>
-                        <span class="skill-tag">Git</span>
+                
+                <div class="skills-section fade-in" id="skills">
+                    <div class="skills-header">
+                        <div class="skills-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="skills-title">Technical Arsenal</h3>
+                    </div>
+                    
+                    <div class="skills-categories">
+                        <div class="skill-category">
+                            <div class="category-header">
+                                <div class="category-icon">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <h4 class="category-name">Backend & Enterprise</h4>
+                            </div>
+                            <div class="category-skills">
+                                <span class="skill-tag-enhanced">Java</span>
+                                <span class="skill-tag-enhanced">Spring Boot</span>
+                                <span class="skill-tag-enhanced">IBM Maximo</span>
+                                <span class="skill-tag-enhanced">PHP</span>
+                                <span class="skill-tag-enhanced">Python</span>
+                                <span class="skill-tag-enhanced">JSP</span>
+                                <span class="skill-tag-enhanced">XML</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <div class="category-header">
+                                <div class="category-icon">
+                                    <i class="fas fa-desktop"></i>
+                                </div>
+                                <h4 class="category-name">Frontend & UI</h4>
+                            </div>
+                            <div class="category-skills">
+                                <span class="skill-tag-enhanced">Angular</span>
+                                <span class="skill-tag-enhanced">TypeScript</span>
+                                <span class="skill-tag-enhanced">JavaScript</span>
+                                <span class="skill-tag-enhanced">HTML5</span>
+                                <span class="skill-tag-enhanced">CSS3</span>
+                                <span class="skill-tag-enhanced">Responsive Design</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <div class="category-header">
+                                <div class="category-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <h4 class="category-name">Database & Tools</h4>
+                            </div>
+                            <div class="category-skills">
+                                <span class="skill-tag-enhanced">MySQL</span>
+                                <span class="skill-tag-enhanced">PostgreSQL</span>
+                                <span class="skill-tag-enhanced">Git</span>
+                                <span class="skill-tag-enhanced">Docker</span>
+                                <span class="skill-tag-enhanced">REST APIs</span>
+                                <span class="skill-tag-enhanced">OSLC</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <div class="category-header">
+                                <div class="category-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <h4 class="category-name">Specialized Platforms</h4>
+                            </div>
+                            <div class="category-skills">
+                                <span class="skill-tag-enhanced">Dolibarr CRM</span>
+                                <span class="skill-tag-enhanced">AliExpress API</span>
+                                <span class="skill-tag-enhanced">OpenShift</span>
+                                <span class="skill-tag-enhanced">WebSphere</span>
+                                <span class="skill-tag-enhanced">MAS9</span>
+                                <span class="skill-tag-enhanced">AI/ML Integration</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1455,18 +1857,13 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    
-                    // Animate stat numbers
-                    if (entry.target.classList.contains('stat-number')) {
-                        entry.target.classList.add('animate');
-                    }
                 }
             });
         }, observerOptions);
         
         // Observe all animation elements
         document.addEventListener('DOMContentLoaded', () => {
-            const animationElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .stat-number');
+            const animationElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
             animationElements.forEach(el => observer.observe(el));
         });
     </script>
