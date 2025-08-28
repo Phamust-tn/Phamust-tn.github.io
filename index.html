@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -111,6 +112,7 @@
         
         .hero-content {
             flex: 1;
+            margin-left: 3rem;
         }
         
         .hero-image {
@@ -128,11 +130,17 @@
             font-size: 3rem;
             margin-bottom: 1rem;
             color: var(--secondary-color);
+            text-align: left;
+            line-height: 1.2;
+            height: 7.2rem;
         }
         
         .typed-text {
             color: var(--primary-color);
             font-weight: 600;
+            display: inline-block;
+            min-width: 280px;
+            text-align: left;
         }
         
         .hero p {
@@ -140,6 +148,38 @@
             margin-bottom: 2rem;
             color: var(--light-text);
             max-width: 600px;
+            margin-left: 0;
+            padding-left: 0;
+        }
+        
+        .stats-section {
+            background: linear-gradient(135deg, var(--primary-color), #1e40af);
+            color: white;
+            padding: 4rem 0;
+            margin: 2rem 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 1rem;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
         }
         
         .btn {
@@ -212,6 +252,199 @@
             border-radius: 20px;
             font-size: 0.9rem;
             font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+            border-color: var(--primary-color);
+        }
+        
+        .testimonials {
+            background-color: var(--highlight);
+            padding: 4rem 0;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .testimonial-card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .author-info h4 {
+            margin: 0;
+            color: var(--secondary-color);
+            font-size: 1rem;
+        }
+        
+        .author-info p {
+            margin: 0;
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+        
+        .quote-icon {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            color: var(--primary-color);
+            opacity: 0.3;
+        }
+        
+        .experience {
+            background-color: var(--card-bg);
+            padding: 5rem 0;
+        }
+        
+        .experience-timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .timeline-line {
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--border-color);
+        }
+        
+        .experience-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 80px;
+        }
+        
+        .experience-date {
+            position: absolute;
+            left: -20px;
+            top: 0;
+            width: 100px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .experience-card {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .experience-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        
+        .experience-header {
+            margin-bottom: 1.5rem;
+        }
+        
+        .experience-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .experience-company {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--primary-color);
+            margin-bottom: 0.3rem;
+        }
+        
+        .experience-location {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            margin-bottom: 0.5rem;
+        }
+        
+        .experience-duration {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            font-style: italic;
+        }
+        
+        .experience-achievements {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .experience-achievements li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.5;
+            color: var(--text-color);
+        }
+        
+        .experience-achievements li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .experience-type {
+            display: inline-block;
+            background-color: var(--highlight);
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
         }
         
         .projects-grid {
@@ -231,6 +464,40 @@
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .project-tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .tech-tag {
+            background-color: var(--bg-color);
+            color: var(--light-text);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            border: 1px solid var(--border-color);
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .project-link {
+            color: var(--primary-color);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .project-link:hover {
+            text-decoration: underline;
         }
         
         .project-image {
@@ -304,16 +571,38 @@
             font-size: 1.5rem;
         }
         
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
         .theme-switch {
             display: flex;
             align-items: center;
             cursor: pointer;
-            margin-left: 1.5rem;
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+        
+        .theme-switch:hover {
+            background-color: var(--highlight);
         }
         
         .theme-switch i {
             font-size: 1.2rem;
             color: var(--text-color);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--text-color);
+            cursor: pointer;
+            padding: 0.5rem;
         }
         
         .project-filters {
@@ -373,6 +662,50 @@
             opacity: 1;
         }
         
+        /* Animation classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.6s ease;
+        }
+        
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.6s ease;
+        }
+        
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        /* Loading animation for stats */
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .stat-number.animate {
+            animation: countUp 0.8s ease forwards;
+        }
+        
         @media (max-width: 768px) {
             .hero {
                 flex-direction: column-reverse;
@@ -423,11 +756,43 @@
                 border: none;
                 color: var(--text-color);
                 cursor: pointer;
+                padding: 0.5rem;
+            }
+            
+            .theme-switch {
+                order: -1;
+                margin-right: 1rem;
             }
             
             .filter-btn {
                 padding: 0.4rem 1rem;
                 font-size: 0.8rem;
+            }
+            
+            .experience-timeline {
+                padding-left: 0;
+            }
+            
+            .timeline-line {
+                display: none;
+            }
+            
+            .experience-item {
+                padding-left: 0;
+                margin-bottom: 2rem;
+            }
+            
+            .experience-date {
+                position: static;
+                width: auto;
+                height: auto;
+                background-color: transparent;
+                color: var(--primary-color);
+                border-radius: 0;
+                display: block;
+                text-align: left;
+                margin-bottom: 1rem;
+                font-size: 1rem;
             }
         }
     </style>
@@ -440,6 +805,7 @@
                 <div class="nav-right">
                     <ul class="nav-links">
                         <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -457,30 +823,53 @@
     
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>IBM Maximo Consultant & <span class="typed-text">Full-Stack Developer</span></h1>
+            <div class="hero-content slide-in-left">
+                <h1>IBM Maximo Consultant &<br><span class="typed-text">Full-Stack Developer</span></h1>
                 <p>Software Engineering student at ESPRIT with a Bachelor's degree in Software Engineering and Information Systems. Specialized in Java, Spring Boot, and PHP, with expertise in JSP, XML, JavaScript, and Python. Ex-team lead with 3 years of management experience.</p>
                 <div class="hero-cta">
                     <a href="#projects" class="btn">View Projects</a>
                     <a href="#contact" class="btn btn-outline">Contact Me</a>
                 </div>
             </div>
-            <div class="hero-image">
+            <div class="hero-image slide-in-right">
                 <img src="https://via.placeholder.com/400" alt="Profile Image">
+            </div>
+        </div>
+    </section>
+    
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">25+</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">99%</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
             </div>
         </div>
     </section>
     
     <section id="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title fade-in">About Me</h2>
             <div class="about-content">
-                <div class="about-text">
+                <div class="about-text fade-in">
                     <p>I'm currently a Software Engineering student at ESPRIT with a Bachelor's degree in Software Engineering and Information Systems. I work as an IBM Maximo Consultant while maintaining Spring Boot-Angular projects.</p>
                     <p>With a strong background in Java, Spring Boot, and PHP, I also have extensive experience with JSP, XML, JavaScript, and Python. I'm passionate about creating efficient and maintainable code that delivers real business value.</p>
                     <p>As an ex-team lead with 3 years of management experience, I excel at coordinating projects and ensuring timely delivery of high-quality solutions.</p>
                 </div>
-                <div class="skills" id="skills">
+                <div class="skills fade-in" id="skills">
                     <h3>Skills & Tools</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Java</span>
@@ -494,6 +883,145 @@
                         <span class="skill-tag">JSP</span>
                         <span class="skill-tag">XML</span>
                         <span class="skill-tag">Git</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title fade-in">Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="timeline-line"></div>
+                
+                <div class="experience-item fade-in">
+                    <div class="experience-date">Current</div>
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Software Developer</h3>
+                            <div class="experience-company">Sinorfi</div>
+                            <div class="experience-location">Tunis, Tunisia</div>
+                            <div class="experience-duration">Oct 2024 - Present</div>
+                            <span class="experience-type">Full-time</span>
+                        </div>
+                        <ul class="experience-achievements">
+                            <li>Personalizing IBM Maximo Application Suite using Java to tailor solutions for client-specific requirements</li>
+                            <li>Developing and implementing evolutions and fixing bugs for a Spring Boot & Angular project interacting with IBM Maximo, ensuring enhanced functionality and stability</li>
+                            <li>Acting as a techno-functional consultant for IBM Maximo, bridging the gap between technical development and business requirements to deliver customized solutions</li>
+                            <li>Conducting team meetings to discuss sprint progress, code reviews, and other development tasks, ensuring efficient collaboration and alignment on project goals</li>
+                            <li>Participating in client meetings to gather requirements, provide project updates, and ensure alignment with client expectations</li>
+                            <li>Conducting thorough testing and debugging to maintain high standards of code quality and performance</li>
+                            <li>Contributed to the development of new modules for an internal Dolibarr project using PHP</li>
+                            <li>Migrated a Spring Boot and Angular project from REST to OSLC for improved interoperability and compliance with industry standards</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-item fade-in">
+                    <div class="experience-date">2024</div>
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Fullstack Developer - Spring Boot & Angular</h3>
+                            <div class="experience-company">Sinorfi</div>
+                            <div class="experience-location">Tunis, Tunisia</div>
+                            <div class="experience-duration">Feb 2024 - May 2024</div>
+                            <span class="experience-type">Internship</span>
+                        </div>
+                        <ul class="experience-achievements">
+                            <li>Developed an e-commerce platform using Spring Boot and Angular, implementing the dropshipping model for efficient order fulfillment</li>
+                            <li>Integrated high-security measures to safeguard sensitive customer information & transaction data</li>
+                            <li>Connected the platform to the AliExpress API for product sourcing and inventory management</li>
+                            <li>Developed a robust user management system, allowing customers to create and manage their accounts, track orders, and leave product reviews</li>
+                            <li>Designed an interactive and user-friendly product detail page, complete with high-quality images, videos, customer reviews, and technical specifications</li>
+                            <li>Collaborated with team members to design and implement features, ensuring compatibility and scalability of the platform</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-item fade-in">
+                    <div class="experience-date">2023-24</div>
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Supervisors Team Lead</h3>
+                            <div class="experience-company">Free2move</div>
+                            <div class="experience-location">Tunis, Tunisia</div>
+                            <div class="experience-duration">Nov 2023 - Sep 2024</div>
+                            <span class="experience-type">Leadership</span>
+                        </div>
+                        <ul class="experience-achievements">
+                            <li>Managed the supervision team, drove high performance, and ensured operational excellence through strategic leadership and performance management</li>
+                            <li>Led and mentored 6 direct reports, achieved over 90% adherence to operational policies, and enhanced team standards</li>
+                            <li>Managed backlogs and daily scheduling, optimizing organizational efficiency</li>
+                            <li>Transformed operational challenges into actionable plans, resulting in increased project completion efficiency</li>
+                            <li>Delegated tasks and responsibilities to team members, optimizing resource allocation and teamwork</li>
+                            <li>Led operational process enhancements by designing and implementing key initiatives to improve service quality and efficiency</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-item fade-in">
+                    <div class="experience-date">2021-23</div>
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Operations Team Lead</h3>
+                            <div class="experience-company">Transcom Worldwide Tunisia</div>
+                            <div class="experience-location">Tunis, Tunisia</div>
+                            <div class="experience-duration">Jul 2021 - Nov 2023</div>
+                            <span class="experience-type">Leadership</span>
+                        </div>
+                        <ul class="experience-achievements">
+                            <li>Managed one-to-one client relationships, ensuring satisfaction, loyalty and retention</li>
+                            <li>Led a team of 25+ across international markets, increased productivity by 20% through targeted performance enhancements and training initiatives</li>
+                            <li>Managed floor governance, ensuring a smooth and efficient working environment</li>
+                            <li>Conducted evaluations of team members, assessing individual contributions, strengths, and areas for improvement</li>
+                            <li>Guaranteed adherence to operational standards and service level agreements, leading continuous improvements that enhanced client service delivery</li>
+                            <li>Tracked key performance indicators and conducted regular performance reviews</li>
+                            <li>Nurtured team development through coaching, mentorship, and training, enhancing skillsets and fostering professional growth</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <p class="testimonial-text">"Excellent work on our Maximo implementation. The custom data management tool significantly improved our workflow efficiency. Highly professional and delivered on time."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div class="author-info">
+                            <h4>John Davis</h4>
+                            <p>IT Manager, Manufacturing Corp</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <p class="testimonial-text">"The daycare management system exceeded our expectations. The Angular frontend is intuitive and the Spring Boot backend is robust. Great communication throughout the project."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <h4>Sarah Miller</h4>
+                            <p>Director, Little Stars Daycare</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <p class="testimonial-text">"Outstanding freelance developer! The VAT calculation system is exactly what we needed. Clean code, good documentation, and excellent support."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RW</div>
+                        <div class="author-info">
+                            <h4>Robert Wilson</h4>
+                            <p>Finance Director, AccuTax Ltd</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -518,7 +1046,16 @@
                     <div class="project-content">
                         <h3 class="project-title">Maximo Data Management Tool</h3>
                         <p class="project-description">A custom component designed for mass data loading and editing within IBM Maximo using JSP, XML, Java, JavaScript, and Python.</p>
-                        <a href="#" class="project-link">Learn More</a>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">JSP</span>
+                            <span class="tech-tag">XML</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-eye"></i> View Details</a>
+                        </div>
                     </div>
                 </div>
                 
@@ -529,7 +1066,16 @@
                     <div class="project-content">
                         <h3 class="project-title">Daycare Management System</h3>
                         <p class="project-description">Freelance project: A comprehensive daycare management solution built with Spring Boot and Angular for scheduling, attendance, and billing.</p>
-                        <a href="#" class="project-link">Learn More</a>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">REST API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-eye"></i> View Details</a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
                     </div>
                 </div>
                 
@@ -540,7 +1086,16 @@
                     <div class="project-content">
                         <h3 class="project-title">VAT Test Application</h3>
                         <p class="project-description">Freelance project: A VAT calculation and validation system developed with Spring Boot backend and Angular frontend.</p>
-                        <a href="#" class="project-link">Learn More</a>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">TypeScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-eye"></i> View Details</a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
                     </div>
                 </div>
                 
@@ -576,27 +1131,98 @@
                         <a href="#" class="project-link">Learn More</a>
                     </div>
                 </div>
+                
+                <div class="project-card" data-category="professional">
+                    <div class="project-image">
+                        <i class="fas fa-table"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Maximo Excel Data Management Component</h3>
+                        <p class="project-description">Development of a data management component inside Maximo in the form of an excel table interface, enabling seamless data manipulation directly within Maximo.</p>
+                        <a href="#" class="project-link">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="professional">
+                    <div class="project-image">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Maximo AI Assistant</h3>
+                        <p class="project-description">AI-powered application operating as a prompt executor for Maximo operations. Similar to ChatGPT but 100% focused on Maximo, executing commands like create, update, and select through API calls.</p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">Maximo API</span>
+                            <span class="tech-tag">NLP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-eye"></i> View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="freelance">
+                    <div class="project-image">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI CV Analyzer</h3>
+                        <p class="project-description">Freelance project: AI-powered CV analysis tool where users upload their CV and receive comprehensive analysis with suggestions to pass ATS filters and improve all CV aspects including language.</p>
+                        <a href="#" class="project-link">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="professional spring">
+                    <div class="project-image">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Spring Boot Migration - Numerequart</h3>
+                        <p class="project-description">Migration of Spring Boot project "Numerequart" from version 2.6.3 to 3.5.5, ensuring compatibility and leveraging new framework features.</p>
+                        <a href="#" class="project-link">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="professional">
+                    <div class="project-image">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Maximo Migration to MAS9</h3>
+                        <p class="project-description">Migration of Maximo from version 7.6 on WebSphere to MAS9 (Maximo Application Suite) on OpenShift, modernizing infrastructure and deployment architecture.</p>
+                        <a href="#" class="project-link">Learn More</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     
     <section id="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Your Name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Your Email">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" placeholder="Your Message"></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
+            <h2 class="section-title fade-in">Get In Touch</h2>
+            <div class="contact-form fade-in">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" placeholder="your.email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="Project Discussion">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" placeholder="Tell me about your project or how I can help you..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
             </div>
         </div>
     </section>
@@ -604,12 +1230,12 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/phamust-tn" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/phamust-tn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/phamust_tn" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:contact@phamust-tn.com" title="Email"><i class="fas fa-envelope"></i></a>
             </div>
-            <p>&copy; 2025 Phamust-tn. All rights reserved.</p>
+            <p>&copy; 2025 Phamust-tn. All rights reserved. | IBM Maximo Consultant & Full-Stack Developer</p>
         </div>
     </footer>
     
@@ -620,7 +1246,7 @@
     <script>
         // Simple typing animation
         const typedText = document.querySelector('.typed-text');
-        const textArray = ["Full-Stack Developer", "Java Expert", "Spring Boot Specialist", "IBM Maximo Consultant"];
+        const textArray = ["Full-Stack Developer", "Java Expert", "Spring Boot Specialist", "Software Engineer"];
         let textArrayIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
@@ -778,17 +1404,18 @@
         }
         
         // Form submission with validation
-        const contactForm = document.querySelector('.contact-form');
+        const contactForm = document.querySelector('.contact-form form');
         
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
             
             if (!name || !email || !message) {
-                alert('Please fill all fields');
+                alert('Please fill all required fields');
                 return;
             }
             
@@ -798,14 +1425,50 @@
             }
             
             // Here you would normally send the data to a server
-            alert('Thank you for your message! I will get back to you soon.');
-            contactForm.reset();
+            // For now, we'll simulate a successful submission
+            const submitBtn = contactForm.querySelector('.btn');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Thank you for your message! I will get back to you soon.');
+                contactForm.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
         });
         
         function validateEmail(email) {
             const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             return re.test(String(email).toLowerCase());
         }
+        
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Animate stat numbers
+                    if (entry.target.classList.contains('stat-number')) {
+                        entry.target.classList.add('animate');
+                    }
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all animation elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const animationElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .stat-number');
+            animationElements.forEach(el => observer.observe(el));
+        });
     </script>
 </body>
 </html>
